@@ -112,7 +112,9 @@ export const getImports = (documentText: string): string[] => {
     return [];
   }
 
-  return importsMatch[1].split('\n').filter((line) => line.trim() != '');
+  return importsMatch[1]
+  .split('\n') // 分割
+  .filter(line => line !== ''); // 过滤空行
 };
 
 export type ImportsRange = {

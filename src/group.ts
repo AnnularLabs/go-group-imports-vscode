@@ -14,7 +14,12 @@ export const goGroupImports = async () => {
   if (!imports.length) return
 
   // 按字母顺序排序
-  const sortedImports = imports.sort()
+  const sortedImports = [...imports].sort((a, b) => {
+    const cleanA = a.replace(/[\t"]/g, ''); // 去掉 \t 和 "
+    const cleanB = b.replace(/[\t"]/g, '');
+    return cleanA.localeCompare(cleanB); // 按清理后的值排序
+  });
+  
   
   const importsRange = getImportsRange(documentText)
   const range = new Range(
