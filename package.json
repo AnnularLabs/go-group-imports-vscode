@@ -1,9 +1,9 @@
 {
-  "name": "go-group-imports",
-  "displayName": "Go Group Imports",
-  "description": "VSCode extension for separating imports in go files into three groups: stdlib, 3rdparty, own.",
-  "version": "1.2.0",
-  "publisher": "aleksandra",
+  "name": "go-sort-imports",
+  "displayName": "Go Sort Imports",
+  "description": "VSCode extension for sort imports in go files.",
+  "version": "1.2.1",
+  "publisher": "agility6",
   "icon": "assets/logo.png",
   "galleryBanner": {
     "color": "#FFE779",
@@ -38,11 +38,6 @@
           "type": "boolean",
           "default": true,
           "description": "Automatically group imports on save."
-        },
-        "groupImports.includeOrgGroup": {
-          "type": "string",
-          "default": "",
-          "description": "Handle imports from the organization into a separate group."
         }
       }
     }
@@ -61,9 +56,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/beerose/go-group-imports-vscode.git"
+    "url": "https://github.com/AnnularLabs/go-group-imports-vscode"
   },
-  "homepage": "https://github.com/beerose/go-group-imports-vscode/blob/master/README.md",
   "dependencies": {
     "@types/mocha": "^5.2.5",
     "mocha": "^5.2.0"

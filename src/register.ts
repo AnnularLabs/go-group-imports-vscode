@@ -30,13 +30,6 @@ export const getOnSaveSetting = () => {
   return workspace.getConfiguration('groupImports').get('onSave')
 }
 
-export const getIncludeOrgGroupSettings = () => {
-  return (
-    workspace.getConfiguration('groupImports').get<string>('includeOrgGroup') ||
-    ''
-  )
-}
-
 export const updateSaveRegistration = () =>
   getOnSaveSetting()
     ? registerWillSaveTextDocument()
